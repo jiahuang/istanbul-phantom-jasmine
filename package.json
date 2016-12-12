@@ -1,0 +1,20 @@
+{
+  "name": "istanbul-phantom-jasmine",
+  "version": "1.0.0",
+  "description": "istanbul, phantom, and jasmine all running together",
+  "main": "index.js",
+  "scripts": {
+    "instrument": "istanbul instrument -o \"tmp/instrument\" \"src\"",
+    "coverage": "istanbul report --include \"tmp/coverage.json\" --dir \"tmp/report\" html",
+    "test": "rm -rf tmp && npm run instrument && grunt test && npm run coverage"
+  },
+  "author": "jia",
+  "license": "MIT",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-jasmine": "^1.0.3",
+    "istanbul": "^0.4.5",
+    "phantomjs": "^2.1.7"
+  }
+}
